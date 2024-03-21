@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+
+  <main class="flex-container">
+    <section class="card-container">
+      <!-- <span class="error-message">March cannot have more than 31 days</span> -->
+      <form class="form">
+
+        <div class="form-contents-container ">
+          <div class="form-contents">
+            <label for="day">Day</label>
+            <input type="text" id="day" placeholder="DD">
+            <span class="error-text">Must be a valid day</span>
+          </div>
+          <div class="form-contents ">
+            <label for="month">Month</label>
+            <input type="text" id="month" placeholder="MM">
+            <span class="error-text">Must be a valid month</span>
+          </div>
+          
+          <div class="form-contents  ">
+            <label for="year"> Year</label>
+            <input type="text" id="year" placeholder="YYYY">
+            <span class="error-text">Must be a valid year</span>
+          </div>
+        </div>
+
+        <button  id="submit-btn" type="submit">
+          <img src="assets/images/icon-arrow.svg" >
+        </button>
+      </form>
+
+      <div class="result-container">
+        <div class="result-contents" id="year-result">
+          <span >-- </span>
+          <span>years</span>
+        </div>
+        <div class="result-contents" id="month-result">
+          <span >-- </span> 
+          <span>months</span>
+        </div>
+        <div class="result-contents" id="day-result">
+          <span >-- </span>
+          <span>days</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

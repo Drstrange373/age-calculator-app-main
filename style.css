@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", monospace;
+    font-size: 32px;
+    overflow-x: hidden;
+    color: var(--off-black);
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.flex-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--off-white);
+}
+
+.card-container{
+    background-color: var(--white);
+    padding: 30px 30px 0 30px;
+    border-radius: 20px 20px 40% 20px;
+    scale: 0.8;
+}
+
+.form-contents-container{
+    display: flex;
+    align-items: center;
+}
+
+.form-contents{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.form-contents label{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--smokey-grey);
+    margin-bottom: 5px;
+}
+
+.form-contents input{
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    padding-left: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.form-contents input::placeholder{
+    font-weight: normal;
+}
+
+.form-contents input:focus{
+    outline-color: var(--purple);
+}
+
+#day, #month, #year{
+    width: 110px;
+}
+
+#submit-btn{
+    margin: 0 auto 30px 450px;
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--purple);
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px 10px 0 10px;
+    
+}
+
+#submit-btn:hover{
+    background-color: var(--off-black);
+}
+
+.result-container{
+    border-top: 2px solid var(--off-white);
+    position: relative;
+    padding-top: 40px;
+    bottom: 60px;
+    z-index: 0;
+}
+
+.result-container > * {
+    font-weight: 900;
+    font-size: 60px ;
+}
+
+.result-contents > *{
+    font-size: inherit;
+}
+
+.result-contents :first-child{
+    color: var(--purple);
+}
+
+.error-text{
+    font-size: 10px;
+    margin-top: 5px;
+    color: var(--light-red);
+    visibility: hidden;
+}
+
+/* 'error-active' class is used to show error text, by using this in 'form-contents' class elements */
+/* try adding 'error-active' class to 'form-content' class element to see the magic */
+
+.error-active label{
+    color: var(--light-red);
+}
+
+.error-active input{
+    outline-color: var(--light-red) !important;
+    border-color: var(--light-red);
+}
+
+.error-active .error-text{
+    visibility: visible;
+}
+
+.error-message{
+    font-size: 16px; 
+    text-align: center ;
+    margin-left: 30px;
+    color: var(--light-red);
+}
+
+
+@media (max-width:600px) {
+    #submit-btn{
+        margin:0 0px 30px 30vw;
+        height: 16vw;
+        width: 16vw;
+    }
+
+    #submit-btn img{
+        height: 80%;
+        width: 80%;
+    }
+
+    .card-container{
+        width: 90%;
+    }
+
+    *{
+        font-size: 3vw;
+    }
+
+    .result-container > *{
+        font-size: 6vw;
+    }
+
+    .form-contents{
+        width: 20vw;
+    }
+
+    .form-contents input, .form-contents label{
+        font-size: 3.5vw;
+    }
+
+    .error-text{
+        font-size: 1.8vw;
+        display: inline-block;
+        width: 100% !important;
+    }
+
+    .error-message{
+        font-size: 3vw;
+        margin-left: 1.5%;
+    }
+
+    .form-contents label{
+        width: fit-content;
+    }
+
+    #day, #month, #year{
+        width:90%;
+        height: 10vw;
+    }
+    
+    .form-contents-container > *{
+        margin: 5px ;
+    }
+
+    .form-contents-container > * > *{
+        height: 6vw;
+        width: 6vw;
+    }
+
+
+}

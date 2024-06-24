@@ -39,9 +39,9 @@ months.set(12, "December")
 /* ---------------------------------------------------- */
 // These listeners are to prevent extra unnecessary inputs from user
 
-dayInput.addEventListener('keypress', handelKeyPress)
-monthInput.addEventListener('keypress', handelKeyPress)
-yearInput.addEventListener('keypress', handelKeyPress)
+dayInput.addEventListener('keydown', handelKeyPress)
+monthInput.addEventListener('keydown', handelKeyPress)
+yearInput.addEventListener('keydown', handelKeyPress)
 
 /* ---------------------------------------------------- */
 // Handling submit event

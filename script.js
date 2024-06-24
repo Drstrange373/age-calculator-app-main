@@ -18,7 +18,7 @@ let isDayErrorActive = false
 let isMonthErrorActive = false
 let isYearErrorActive = false
 /* ---------------------------------------------------- */
-
+alert("new build")
 console.log("new build deployed")
 
 // Trying Map class instead of objects or arrays😅 

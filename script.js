@@ -60,7 +60,9 @@ form.addEventListener('submit', handelSubmit)
 /* ---------------------------------------------------- */
 // Event handler functions
 function handelKeyPress(evt) {
-    // Function to prevent user from unnecessary adding input and to remove validator error message if present
+    // Function to prevent user from unnecessary adding input and to remove
+ validator error message if present
+console.log("event triggered")
     if (!isCharNumber(evt.key)) {
         evt.preventDefault()
     }
